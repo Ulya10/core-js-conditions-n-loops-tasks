@@ -484,7 +484,7 @@ function shuffleChar(str, iterations) {
   let curr = str;
   let step = 0;
   const seen = [];
-  while (true) {
+  while (step <= iterations) {
     let found = false;
     let index = -1;
     for (let i = 0; i < seen.length; i += 1) {
@@ -510,6 +510,7 @@ function shuffleChar(str, iterations) {
     curr = doShuffle(curr);
     step += 1;
   }
+  return curr;
 }
 
 /**
